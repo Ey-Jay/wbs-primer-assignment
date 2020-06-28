@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="/styles.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/site.webmanifest">
+
+  <script src="/script.js" defer></script>
+  <script src="/profile.js" defer></script>
+  <title>Your profile</title>
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="main-header__container">
+      <a href="/" class="logo-link">
+        <img src="/assets/images/logo-11.svg" alt="logo" class="main-header__logo" height="80px">
+      </a>
+
+      <nav class="main-header__nav">
+        <a href="/" class="main-header__nav--link">Home</a>
+        <a href="#" class="main-header__nav--link">About</a>
+        <a href="/contact.html" class="main-header__nav--link">Contact</a>
+        <a href="/loggedout.html" class="main-header__nav--link log-out-button">Log Out</a>
+      </nav>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="main-container">
+      <div class="content">
+        <h1>Your Profile</h1>
+        <p>Welcome back, <span id="username-spot"></span></p>
+        <div class="profile-info" style="display: flex; justify-content: center;">
+          <div class="profile-image__container"
+            style="height: 100px; width: 100px; border-radius: 50%; margin: 0 10px; overflow: hidden;">
+            <img class="profile-image" src="/assets/images/profile-image.jpg" height="150%" width="auto">
+          </div>
+          <div class="profile-stats">
+            <p>Joined: <span style="font-weight: 600;">June 1st 2020</span></p>
+            <p>Posts written: <span id="amount-posts" style="font-weight: 600;"></span></p>
+          </div>
+        </div>
+        <button id="new-post" class="post-button">+NEW POST</button>
+        <div class="backdrop"></div>
+        <div class="add-post__modal">
+          <div class="modal__post-content">
+            <label for="title">Post Title</label>
+            <input type="text" name="title" id="title">
+            <label for="image-url">Image Url</label>
+            <input type="text" name="image-url" id="image-url" value="/assets/images/beardman-water.jpg">
+            <label for="post-content">Post Content</label>
+            <textarea name="post-content" id="post-content" rows="10"></textarea>
+          </div>
+          <div class="modal__buttons">
+            <button id="cancel-button" class="post-button cancel">Cancel</button>
+            <button id="post-button" class="post-button">Post</button>
+          </div>
+        </div>
+        <section class="my-recent-posts">
+          <h2>Your Recent Posts</h2>
+          <div class="recent-posts__container">
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-container__content">
+        <p>developed by <a href="https://erickjansen.com">Erick Jansen</a> for the <a
+            href="https://www.wbscodingschool.com/" target="_blank">WBS Coding School</a>
+          Primer</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-burger" onclick="transformBurgerToX(this)">
+    <div class="mobile-burger__line-1"></div>
+    <div class="mobile-burger__line-2"></div>
+    <div class="mobile-burger__line-3"></div>
+  </div>
+  <div class="mobile-burger__nav hide">
+    <a href="/">
+      <img src="/assets/images/logo-11.svg" alt="logo" class="mobile-burger__nav--logo" height="80px">
+    </a>
+    <div class="mobile-burger__nav--links">
+      <a href="/" class="mobile-burger__nav--link">Home</a>
+      <a href="#" class="mobile-burger__nav--link">About</a>
+      <a href="/contact.html" class="mobile-burger__nav--link">Contact</a>
+      <a href="/loggedout.html" class="mobile-burger__nav--link log-out-button">Log Out</a>
+    </div>
+  </div>
+</body>
+
+</html>
